@@ -1,0 +1,28 @@
+page-home {
+   ion-content{
+       .text-center {
+           margin-top: 100px; 
+       }
+
+       .header{
+           color: white;
+       }
+
+       .header h1{
+           font-size: 40px;
+       }
+       
+       .header p{
+           font-size: 21px;
+           padding-top: 0;
+       }
+    
+       #btn button{
+           background-color: #FF6464;
+           width: 100px;
+           font-size: 18px;
+           padding: 20px;
+           margin-bottom: 20px;
+       }
+   }
+}
