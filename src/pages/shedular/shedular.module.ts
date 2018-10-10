@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { MainPage } from './main';
-
+import { ShedularPage } from './shedular';
 
 @NgModule({
   declarations: [
-    MainPage,
+    ShedularPage,
   ],
   imports: [
-    IonicPageModule.forChild(MainPage),
+    IonicPageModule.forChild(ShedularPage),
   ],
 })
-export class MainPageModule {}
+export class ShedularPageModule {}

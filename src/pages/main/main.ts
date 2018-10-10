@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+//import { Calendar } from '@ionic-native/calendar';
+
 
 /**
  * Generated class for the MainPage page.
@@ -14,16 +16,30 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'main.html',
 })
 export class MainPage {
+ 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  
   }
+  
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MainPage');
   }
 
-  addmytask(){
+  
+  addTask(){
     this.navCtrl.push('AddTaskPage');
   }
 
+  viewShedular(){
+    this.navCtrl.push('AddTaskNextPage');
+  }
+  
+
+  /*addmytask(){
+    //this.navCtrl.push('AddTaskPage');
+  }*/
+
+  
 }

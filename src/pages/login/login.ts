@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
@@ -14,6 +14,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'login.html',
 })
 export class LoginPage {
+  @ViewChild('username') username;
+  @ViewChild('password') password;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
@@ -23,7 +25,10 @@ export class LoginPage {
   }
 
   main(){
-    this.navCtrl.push('MainPage');
+    if(this.username.value == 'Maneesha' && this.password.value == 'maneesha123'){
+      this.navCtrl.push('MainPage');
+    }
+    
   }
-
+  //
 }

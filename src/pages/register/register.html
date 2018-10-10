@@ -15,25 +15,25 @@
 
 <ion-content padding>
     <ion-item>
-        <ion-label floating>Name</ion-label>
-        <ion-input type="text" [(ngModel)] ="name"></ion-input>
+        <ion-label floating>Full Name</ion-label>
+        <ion-input type="text" #name></ion-input>
       </ion-item>
       <ion-item>
-          <ion-label floating>Nickname</ion-label>
-          <ion-input type="text" [(ngModel)] = "nickname"></ion-input>
+          <ion-label floating>Username</ion-label>
+          <ion-input type="text" #username></ion-input>
       </ion-item>
       <ion-item>
           <ion-label floating>Family Name</ion-label>
-          <ion-input type="text" [(ngModel)] = "familyname" ></ion-input>
+          <ion-input type="text" #familyname></ion-input>
       </ion-item>
   <ion-item>
       <ion-label floating>Phone Number</ion-label>
-      <ion-input type="text" [(ngModel)] = "phone" ></ion-input>
+      <ion-input type="text" #phone></ion-input>
     </ion-item>
     <ion-item>
         <ion-label floating>Password</ion-label>
-        <ion-input type="password" [(ngModel)] = "password" ></ion-input>
+        <ion-input type="password" #password></ion-input>
     </ion-item>
 
-    <button ion-button color="secondary" (click) = "login()">Register</button>
+    <button ion-button color="secondary" (click) = "SignUp()">Register</button>
 </ion-content>

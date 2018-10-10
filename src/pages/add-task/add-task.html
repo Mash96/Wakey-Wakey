@@ -7,22 +7,74 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>addTask</ion-title>
+    <ion-title>Add My Task</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-    <!--<ion-item>
-        <ion-label>Choose the Day</ion-label>
+   <ion-item>
+        <ion-label>Add a Task</ion-label>
         <ion-select [(ngModel)]="day">
-          <ion-option value="monday" selected="true">Monday</ion-option>
-          <ion-option value="tuesday">Tuesday</ion-option>
-          <ion-option value="wednesday">Wednesday</ion-option>
-          <ion-option value="thursday">Thursday</ion-option>
-          <ion-option value="friday">Friday</ion-option>
+            <ion-option value="Wake up" selected="true">Wake up</ion-option>
+          <ion-option value="Use Bathroomb">Use Bathroom</ion-option>
+          <ion-option value="Ioring Cloths">Ioring Cloths</ion-option>
+          <ion-option value="wednesday">Taking the Vehicle</ion-option>
+          <ion-option value="thursday">Cooking Meals</ion-option>
+          <ion-option value="friday">Leaving Home</ion-option>
         </ion-select>
-      </ion-item>-->
+      </ion-item>
+
+      <h6 class = 'headings'>Choose the Day</h6>
+      <ion-list id = 'list'>
+
+          <ion-item>
+            <ion-label>Monday</ion-label>
+            <ion-checkbox [(ngModel)]="monday"></ion-checkbox>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Tuesday</ion-label>
+            <ion-checkbox [(ngModel)]="tuesday"></ion-checkbox>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Wednesday</ion-label>
+            <ion-checkbox [(ngModel)]="wednesday"></ion-checkbox>
+          </ion-item>
+
+          <ion-item>
+              <ion-label>Thursday</ion-label>
+              <ion-checkbox [(ngModel)]="thursday"></ion-checkbox>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Friday</ion-label>
+                <ion-checkbox [(ngModel)]="friday"></ion-checkbox>
+              </ion-item>
+        
+        </ion-list>
+<br>
+        <ion-item>
+            <ion-label>Start Time</ion-label>
+            <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="timeStarts"></ion-datetime>
+        </ion-item>
+<br>
+        <ion-item>
+            <ion-label>End Time</ion-label>
+            <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="timeEnds"></ion-datetime>
+        </ion-item>
+        <br>
+
+        <ion-item>
+            <ion-label>Add Privacy</ion-label>
+            <ion-select [(ngModel)]="privacy">
+                <ion-option value="everyday" selected="true">Public</ion-option>
+              <ion-option value="monday">Private</ion-option>
+              </ion-select>
+              </ion-item>
+
+        <button class =  'btn' ion-button color="secondary" (click)="addTaskNext()">Add Task</button>
 
 </ion-content>
